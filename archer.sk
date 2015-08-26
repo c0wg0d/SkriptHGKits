@@ -1,0 +1,19 @@
+on skript start:
+	register new ability 20 name "Archer" description "Get arrows easily."
+on death of chicken:
+	attacker has ability 20
+	remove all feathers from drops
+	set {_rd} to a random integer between 1 and 3
+	if {_rd} is 1:
+		drop 1 feather at victim
+	if {_rd} is 2:
+		drop 2 feather at victim
+	if {_rd} is 3:
+		drop 3 feather at victim
+	if {_rd} is 4:
+		drop 4 feather at victim
+on break of gravel:
+	give a flint to player
+on death of skeleton:
+	remove all arrows from drops
+	drop 2 arrows at victim
