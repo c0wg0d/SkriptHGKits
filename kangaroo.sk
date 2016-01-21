@@ -1,0 +1,17 @@
+on skript start:
+	register new ability 4 name "Kangaroo" description "Jump Boost"
+
+on click with firework rocket:
+	cancel event
+	push player up at speed 1
+
+on click with firework rocket:
+	cancel event
+	player is sneaking
+	push player forward at speed 1
+
+on player drop of firework rocket:
+	cancel event
+
+on death of player:
+	remove firework rocket from player
